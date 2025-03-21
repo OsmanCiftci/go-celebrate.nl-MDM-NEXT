@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "request_for_quotes",
+  "info": {
+    "singularName": "request-for-quote",
+    "pluralName": "request-for-quotes",
+    "displayName": "Request for quote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::event.event"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "token": {
+      "type": "uid"
+    },
+    "quoteNumber": {
+      "type": "string"
+    }
+  }
+}

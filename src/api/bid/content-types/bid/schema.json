@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bids",
+  "info": {
+    "singularName": "bid",
+    "pluralName": "bids",
+    "displayName": "Bid",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "bidLines": {
+      "type": "component",
+      "repeatable": true,
+      "component": "event.bid"
+    },
+    "attachments": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "offering": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::offering.offering"
+    },
+    "totalNetPrice": {
+      "type": "decimal"
+    },
+    "totalSalesPrice": {
+      "type": "decimal"
+    },
+    "totalVat": {
+      "type": "decimal"
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status.status"
+    },
+    "eventService": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event-service.event-service",
+      "inversedBy": "bids"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_services",
+  "info": {
+    "singularName": "event-service",
+    "pluralName": "event-services",
+    "displayName": "Event service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    },
+    "shortList": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::offering.offering"
+    },
+    "bids": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::bid.bid",
+      "mappedBy": "eventService"
+    },
+    "preferences": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attribute-definition.attribute-definition"
+    },
+    "comment": {
+      "type": "text"
+    }
+  }
+}

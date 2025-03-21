@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "attribute_types",
+  "info": {
+    "singularName": "attribute-type",
+    "pluralName": "attribute-types",
+    "displayName": "Attribute type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "key": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    },
+    "attributeDefinitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::attribute-definition.attribute-definition",
+      "mappedBy": "attributeType"
+    },
+    "valueType": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "enumeration",
+      "enum": [
+        "option",
+        "multipleOption",
+        "text"
+      ]
+    },
+    "allowAsPreference": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "boolean"
+    },
+    "pipedriveFieldId": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "addresses",
+  "info": {
+    "singularName": "address",
+    "pluralName": "addresses",
+    "displayName": "Address",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "county": {
+      "type": "string"
+    },
+    "region": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "street": {
+      "type": "string"
+    },
+    "houseNumber": {
+      "type": "string"
+    },
+    "apartment": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "addressType": {
+      "type": "enumeration",
+      "enum": [
+        "headquarters",
+        "invoice",
+        "venue",
+        "branch"
+      ]
+    },
+    "zipCode": {
+      "type": "string"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "additionalInfo": {
+      "type": "string"
+    }
+  }
+}

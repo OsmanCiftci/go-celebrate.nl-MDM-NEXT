@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vat_types",
+  "info": {
+    "singularName": "vat-type",
+    "pluralName": "vat-types",
+    "displayName": "Vat type"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "decimal"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    }
+  }
+}

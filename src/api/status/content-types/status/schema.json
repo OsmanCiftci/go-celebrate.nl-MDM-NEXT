@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "statuses",
+  "info": {
+    "singularName": "status",
+    "pluralName": "statuses",
+    "displayName": "Status",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "vendor",
+        "offering",
+        "event",
+        "bid"
+      ]
+    },
+    "order": {
+      "type": "integer"
+    },
+    "colorHex": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "mdm-next",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "generate": "strapi generate"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-graphql": "^4.4.5",
+    "@strapi/plugin-i18n": "4.4.5",
+    "@strapi/plugin-seo": "^1.7.3",
+    "@strapi/plugin-users-permissions": "4.4.5",
+    "@strapi/provider-email-sendgrid": "^4.2.3",
+    "@strapi/provider-upload-supabase": "npm:strapi-provider-upload-supabase@^1.0.0",
+    "@strapi/strapi": "4.4.5",
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.11",
+    "pg": "8.6.0",
+    "puppeteer": "^14.4.1",
+    "strapi-plugin-slugify": "^2.2.2",
+    "supabase": "^0.5.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "d7c4d2e8-3c78-4fe5-947c-c37876d97a10"
+  },
+  "engines": {
+    "node": ">=14.17.1 <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

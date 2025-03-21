@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_offering_service_areas",
+  "info": {
+    "displayName": "serviceArea",
+    "icon": "map-pin"
+  },
+  "options": {},
+  "attributes": {
+    "city": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::city.city"
+    },
+    "county": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::county.county"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::region.region"
+    },
+    "country": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::country.country"
+    },
+    "radius": {
+      "type": "integer"
+    }
+  }
+}

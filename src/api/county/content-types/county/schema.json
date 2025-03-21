@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "counties",
+  "info": {
+    "singularName": "county",
+    "pluralName": "counties",
+    "displayName": "County"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "region": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::region.region",
+      "inversedBy": "counties"
+    },
+    "cities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::city.city",
+      "mappedBy": "county"
+    }
+  }
+}

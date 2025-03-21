@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "debtors",
+  "info": {
+    "singularName": "debtor",
+    "pluralName": "debtors",
+    "displayName": "Debtor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string"
+    },
+    "cocNumber": {
+      "type": "string"
+    },
+    "vatNumber": {
+      "type": "string"
+    },
+    "invoiceAddress": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address.address"
+    },
+    "vendor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vendor.vendor",
+      "mappedBy": "debtor"
+    },
+    "addresses": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address.address"
+    }
+  }
+}

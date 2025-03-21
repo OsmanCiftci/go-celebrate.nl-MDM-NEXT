@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_event_bids",
+  "info": {
+    "displayName": "bid",
+    "icon": "percentage",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "netPrice": {
+      "type": "decimal"
+    },
+    "salesPrice": {
+      "type": "decimal"
+    },
+    "vatType": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::vat-type.vat-type"
+    },
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

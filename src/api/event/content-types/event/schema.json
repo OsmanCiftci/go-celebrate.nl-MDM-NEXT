@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "datetime"
+    },
+    "endDate": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
+    },
+    "address": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address.address"
+    },
+    "dealId": {
+      "type": "string"
+    },
+    "numberOfGuests": {
+      "type": "integer"
+    },
+    "budgetPerPerson": {
+      "type": "decimal"
+    },
+    "occasion": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::occasion.occasion"
+    },
+    "paidBy": {
+      "type": "enumeration",
+      "enum": [
+        "guests",
+        "host"
+      ]
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "preferredLocale": {
+      "type": "string"
+    },
+    "facilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::facility.facility"
+    },
+    "status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::status.status"
+    },
+    "eventServices": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-service.event-service"
+    }
+  }
+}

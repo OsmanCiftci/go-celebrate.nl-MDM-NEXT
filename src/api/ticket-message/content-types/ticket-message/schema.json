@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ticket_messages",
+  "info": {
+    "singularName": "ticket-message",
+    "pluralName": "ticket-messages",
+    "displayName": "Ticket message"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "direction": {
+      "type": "enumeration",
+      "enum": [
+        "incoming",
+        "outgoing"
+      ]
+    },
+    "ticket": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ticket.ticket",
+      "inversedBy": "ticketMessages"
+    },
+    "from": {
+      "type": "string"
+    },
+    "to": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "attachments": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

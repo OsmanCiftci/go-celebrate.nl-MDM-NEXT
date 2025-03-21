@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "occasions",
+  "info": {
+    "singularName": "occasion",
+    "pluralName": "occasions",
+    "displayName": "Occasion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "key": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "offerings": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::offering.offering",
+      "inversedBy": "occasions"
+    },
+    "order": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_contacts",
+  "info": {
+    "displayName": "contact",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "prefixName": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "pipedriveId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "mailer",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "Mailer",
+    "description": "Our custom plugin handling SendGrid integration.",
+    "kind": "plugin"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "7.7.0"
+  },
+  "author": {
+    "name": "Bence Husi",
+    "email": "bence@go-celebrate.com"
+  },
+  "maintainers": [
+    {
+      "name": "Bence Husi"
+    }
+  ],
+  "engines": {
+    "node": ">=14.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
