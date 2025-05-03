@@ -107,8 +107,16 @@ coverage
 ############################
 
 .env
+.env.production
 license.txt
 exports
 *.cache
 build
-.strapi-updater.json
+.strapi-updater.json*
+
+#####
+# Folders
+####
+
+old-trash 
+
