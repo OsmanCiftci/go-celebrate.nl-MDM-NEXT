@@ -14,17 +14,17 @@
   "dependencies": {
     "@strapi/plugin-graphql": "4.4.5",
     "@strapi/plugin-i18n": "4.4.5",
-    "@strapi/plugin-seo": "^1.7.3",
+    "@strapi/plugin-seo": "1.7.3",
     "@strapi/plugin-users-permissions": "4.4.5",
-    "@strapi/provider-email-sendgrid": "^4.2.3",
-    "@strapi/provider-upload-supabase": "npm:strapi-provider-upload-supabase@^1.0.0",
+    "@strapi/provider-email-sendgrid": "4.2.3",
+    "@strapi/provider-upload-supabase": "npm:strapi-provider-upload-supabase@1.0.0",
     "@strapi/strapi": "4.4.5",
-    "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.11",
+    "axios": "0.27.2",
+    "cheerio": "1.0.0-rc.11",
     "pg": "8.6.0",
-    "puppeteer": "^14.4.1",
-    "strapi-plugin-slugify": "^2.2.2",
-    "supabase": "^0.5.0"
+    "puppeteer": "14.4.1",
+    "strapi-plugin-slugify": "2.2.2",
+    "supabase": "0.5.0"
   },
   "author": {
     "name": "A Strapi developer"
