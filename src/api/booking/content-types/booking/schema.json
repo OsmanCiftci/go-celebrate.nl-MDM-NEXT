@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true,
+    "comment": ""
+  },
+  "attributes": {
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "eventType": {
+      "type": "string"
+    },
+    "services": {
+      "type": "json"
+    },
+    "foodsdrinks": {
+      "type": "json"
+    },
+    "dietary": {
+      "type": "string"
+    },
+    "guests": {
+      "type": "integer"
+    },
+    "budgetPerGuests": {
+      "type": "decimal"
+    },
+    "whopays": {
+      "type": "string"
+    },
+    "details": {
+      "type": "text"
+    },
+    "voorwarden": {
+      "type": "boolean"
+    }
+  }
+}
