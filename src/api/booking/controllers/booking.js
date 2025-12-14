@@ -43,6 +43,7 @@ module.exports = createCoreController("api::booking.booking", ({ strapi }) => ({
         budgetPerGuests: body.budgetPerGuests ?? null, // decimal
         details: body.details ?? null,
         whopays: body.whopays ?? null, // schema'na eklediysen
+        selectedOfferings: body.selectedOfferings ?? [], // json (array of objects with id and name)
         // default true istiyorsan burada zorla:
         voorwaarden: body.voorwaarden === undefined ? true : !!body.voorwaarden,
       };

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "booking",
     "pluralName": "bookings",
-    "displayName": "Booking"
+    "displayName": "Booking",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true,
@@ -61,6 +62,9 @@
     },
     "voorwarden": {
       "type": "boolean"
+    },
+    "selectedOfferings": {
+      "type": "json"
     }
   }
 }
