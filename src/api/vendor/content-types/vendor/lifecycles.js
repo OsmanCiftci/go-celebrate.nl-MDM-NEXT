@@ -79,7 +79,7 @@ module.exports = {
                 },
                 {
                     params: {
-                        api_token: process.env.PIPEDRIVE_API_TOKEN
+                        api_token:'1ab79b7c7d1e647a9989a1dc575aa74a62b5c1a2'
                     }
                 })
                 //console.log(data)
