@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "health_checks",
+  "info": {
+    "singularName": "health-check",
+    "pluralName": "health-checks",
+    "displayName": "Health check",
+    "description": "Test entries from the automatic site check (GitHub Actions, TODO TEST-2): written, read back and deleted on every run, so this list is normally empty. Not used by the website."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "source": {
+      "type": "string"
+    },
+    "runId": {
+      "type": "string"
+    }
+  }
+}
