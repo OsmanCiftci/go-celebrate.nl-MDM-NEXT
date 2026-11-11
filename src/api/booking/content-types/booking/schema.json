@@ -36,6 +36,12 @@
     "endDate": {
       "type": "date"
     },
+    "startTime": {
+      "type": "time"
+    },
+    "endTime": {
+      "type": "time"
+    },
     "eventType": {
       "type": "string"
     },

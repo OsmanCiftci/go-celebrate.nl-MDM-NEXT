@@ -7,6 +7,13 @@ const cryptoRandomString = require("crypto-random-string");
 // Controller that extends Strapi core controller (create/find/findOne/update/delete),
 // and adds a custom action createRfq. This fixes "Handler not found booking.create"
 // because core CRUD handlers are now provided by createCoreController.
+// Booking form times arrive as "HH:mm"; Strapi's time field needs "HH:mm:ss.SSS".
+// Anything that isn't a valid time becomes null, so a bad time never blocks a booking.
+const toTime = (value) => {
+  const m = /^([01]\d|2[0-3]):([0-5]\d)(?::([0-5]\d))?/.exec(String(value ?? "").trim());
+  return m ? `${m[1]}:${m[2]}:${m[3] || "00"}.000` : null;
+};
+
 module.exports = createCoreController("api::booking.booking", ({ strapi }) => ({
   /**
    * Custom action: createRfq
@@ -34,6 +41,8 @@ module.exports = createCoreController("api::booking.booking", ({ strapi }) => ({
         city: body.city ?? null,
         startDate: body.startDate ?? null, // "YYYY-MM-DD"
         endDate: body.endDate ?? null, // "YYYY-MM-DD"
+        startTime: toTime(body.startTime), // "HH:mm" → "HH:mm:00.000" (serving hours, Mathilde 2026-11)
+        endTime: toTime(body.endTime),
         eventType: body.eventType ?? null,
         services: body.services ?? [], // json (array)
         foodsdrinks: body.foodsdrinks ?? [], // json (array)
