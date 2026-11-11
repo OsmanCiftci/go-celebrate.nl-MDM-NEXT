@@ -53,8 +53,9 @@ module.exports = createCoreController("api::booking.booking", ({ strapi }) => ({
         details: body.details ?? null,
         whopays: body.whopays ?? null, // schema'na eklediysen
         selectedOfferings: body.selectedOfferings ?? [], // json (array of objects with id and name)
-        // default true istiyorsan burada zorla:
-        voorwaarden: body.voorwaarden === undefined ? true : !!body.voorwaarden,
+        // Terms accepted? The database field is spelled "voorwarden" (old typo, kept to avoid a column rename).
+        // Only an explicit yes counts; before 2026-11-12 this wrote to a non-existent field, so older bookings are empty.
+        voorwarden: body.voorwaarden === true || body.voorwaarden === "Ja",
       };
 
       // create
