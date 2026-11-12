@@ -52,7 +52,7 @@
       "type": "json"
     },
     "dietary": {
-      "type": "string"
+      "type": "text"
     },
     "guests": {
       "type": "integer"
