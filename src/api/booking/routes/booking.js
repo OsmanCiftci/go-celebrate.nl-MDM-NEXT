@@ -44,5 +44,16 @@ module.exports = {
         middlewares: [],
       },
     },
+    {
+      // Finish an unfinished booking from the same form (one-time key, 60 minutes), see controller publicUpdate
+      method: "PUT",
+      path: "/bookings/public/:id",
+      handler: "booking.publicUpdate",
+      config: {
+        auth: false,
+        policies: [],
+        middlewares: [],
+      },
+    },
   ],
 };

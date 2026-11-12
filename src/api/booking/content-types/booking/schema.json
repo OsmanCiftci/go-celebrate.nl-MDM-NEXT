@@ -71,6 +71,14 @@
     },
     "selectedOfferings": {
       "type": "json"
+    },
+    "formToken": {
+      "type": "string",
+      "private": true
+    },
+    "formTokenExpiresAt": {
+      "type": "datetime",
+      "private": true
     }
   }
 }
