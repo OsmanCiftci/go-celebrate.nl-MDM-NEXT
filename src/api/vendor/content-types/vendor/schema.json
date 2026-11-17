@@ -30,7 +30,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "facebook": {
       "pluginOptions": {
@@ -38,7 +39,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "instagram": {
       "pluginOptions": {
@@ -46,7 +48,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "email": {
       "pluginOptions": {
@@ -54,7 +57,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "phone": {
       "pluginOptions": {
@@ -62,7 +66,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "slug": {
       "pluginOptions": {
@@ -84,18 +89,21 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "debtor": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::debtor.debtor",
-      "inversedBy": "vendor"
+      "inversedBy": "vendor",
+      "private": true
     },
     "addresses": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::address.address"
+      "target": "api::address.address",
+      "private": true
     },
     "logo": {
       "type": "media",
@@ -124,7 +132,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "importStatus": {
       "pluginOptions": {
@@ -132,7 +141,8 @@
           "localized": true
         }
       },
-      "type": "string"
+      "type": "string",
+      "private": true
     },
     "archive": {
       "pluginOptions": {
@@ -175,7 +185,8 @@
         "i18n": {
           "localized": false
         }
-      }
+      },
+      "private": true
     },
     "contact": {
       "type": "component",
@@ -185,7 +196,8 @@
           "localized": true
         }
       },
-      "component": "shared.contact"
+      "component": "shared.contact",
+      "private": true
     }
   }
 }

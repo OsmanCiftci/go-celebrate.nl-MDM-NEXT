@@ -6,4 +6,6 @@
 
 const { createCoreRouter } = require('@strapi/strapi').factories;
 
-module.exports = createCoreRouter('api::debtor.debtor');
+// No public REST routes (TODO SEC-1, 2026-11-17): debtor records hold company and address details and were readable by anyone
+// at /api/debtors. The website never uses them; the admin panel and the backend code (entityService) do not need these routes.
+module.exports = createCoreRouter('api::debtor.debtor', { only: [] });
